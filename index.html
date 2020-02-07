@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="no">
+<head>
+	<link rel="shortcut icon" type="image/x-icon" href="https://www.staminahelse.no/favicon.ico" />
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta author="Michael Lund @ 7feb2020">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<title>Stamina Helse | Norges ledende leverandør av bedriftshelsetjenester.</title>
+</head>
+
+<body>
+	<div id="burger">
+		<div class="ham" id="ham1"></div>
+		<div class="ham" id="ham2"></div>
+		<div class="ham" id="ham3"></div>
+	</div>
+	<div id="meny">
+		<img src="img/logo.png" alt="stamina helse logo" />
+		<ul>
+			<li>Stamina Helse</li>
+			<li>Meny2</li>
+			<li>Meny3</li>
+			<li>Meny4</li>
+			<li>Meny5</li>
+		</ul>
+	</div>
+	<div id="ramme">
+		<div class="holder" id="hold1">
+			<img src="https://www.staminahelse.no/globalassets/sykefravar/sykefravaer.jpg" alt="høstbilde">
+		</div>
+		<div class="holder" id="overlayer">
+			<h2 class="subtittel">Beregn din BMR</h2>
+			<form>
+				<fieldset>
+					<legend>Kjønn</legend>
+					<label for="mann">Mann:</label><input type="radio" name="kjonn" id="mann">
+					<label for="kvinne">Kvinne:</label><input type="radio" name="kjonn" id="kvinne">
+				</fieldset>
+				<fieldset>
+					<legend>Mål</legend>
+					<input type="number" name="vekt" placeholder="Vekt i kg" id="weight" />
+					<input type="number" name="høyde" placeholder="Høyde i cm" id="hoyde" />
+					<input type="number" name="alder" placeholder="Alder" id="age" />
+				</fieldset>
+			</form>
+			<div id="knappen"><h4>Beregn</h4></div>
+			</div>
+		</div>
+		<div id="result"><span id="resultatet">00</span></div>
+	
+<script src="js/kode.js"></script>
+<script>
+   $(document).ready(function(){
+	  $("#meny").hide();
+	  $("#result").hide();
+      $("#burger").click(function(){
+            $("#ham1").toggleClass("hamclose1");
+            $("#ham2").toggleClass("hamclose2");
+            $("#ham3").toggleClass("hamclose3");
+            $( "#meny" ).animate({
+               opacity: "toggle",
+               height: "toggle"
+              }, 800);
+      });
+	   $("#result").click(function(){
+		   $(this).hide();
+	   });
+   });
+</script>
+
+</body>
+</html>

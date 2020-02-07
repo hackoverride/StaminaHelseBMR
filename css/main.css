@@ -1,0 +1,283 @@
+:root{
+	--maincolor: #006f4a;
+	--background: #FFF;
+	--comcolor: #fbf7f5;
+	--textcolor: #606060;
+}
+body{
+	margin: 0;
+	padding: 0;
+	background-color: var(--background);
+	font-family: monospace;
+	color: var(--textcolor);
+}
+
+#burger {
+	position: absolute;
+	z-index: 5;
+	top: 0;
+	right: 0;
+	margin: 5vw;
+	border: 1px solid var(--maincolor);
+}
+
+.ham {
+	background-color: var(--maincolor);
+	z-index: 4;
+	width: 15vw;
+	height: 1vh;
+	margin: 1vh;
+	transition: .3s ease-in-out;
+}
+.hamclose1{
+	transform: translateY(2vh) rotate(135deg);
+}
+.hamclose2{
+	opacity: 0;
+}
+.hamclose3{
+	transform: translateY(-2vh) rotate(-135deg);
+}
+#meny {
+	position: absolute;
+	z-index: 3;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: var(--comcolor);
+	border-bottom: 1vh solid var(--maincolor);
+}
+#meny img{
+	width: 40vw;
+	margin: 5vw;
+}
+ul{
+	padding: 5vw;
+}
+ul > li{
+	list-style: none;
+	font-size: 1.2em;
+	letter-spacing: .1em;
+	margin: 2vh 0;
+}
+ul > li:hover{
+	color: var(--maincolor);
+}
+
+.holder {
+	margin: 5vw;
+	position: relative;
+	width: 90vw;
+}
+#hold1{
+	margin-top: 12vh;
+	overflow: hidden;
+}
+
+#knappen {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 30vw;
+	height: 5vh;
+	border: .8vw solid var(--maincolor);
+	margin: 1vh 0 0 0;
+	text-align: center;
+	transition: .3s ease-in-out;
+	box-shadow: 0 2px 4px var(--textcolor);;
+}
+#knappen:hover {
+	background-color: var(--maincolor);
+	color: var(--background);
+	transform: translate(-50%, -2px);
+	box-shadow: 0 4px 4px var(--textcolor);
+}
+#knappen h4{
+	margin: 0;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 130%;
+}
+legend{
+	font-size: 1.3em;
+	color: var(--maincolor);
+}
+label{
+	font-size: 1.3em;
+}
+fieldset{
+	position: relative;
+	border: .3vw solid var(--maincolor);
+	width: 80%;
+	left: 50%;
+	transform: translateX(-50%);
+	text-align: center;
+}
+input{
+	padding: 1vw;
+	font-size: 1.2em;
+	text-align: center;
+	margin: 1vw;
+}
+
+#overlayer {
+	z-index: 2;
+	transform: translateY(-60%);
+	background-color: var(--comcolor);
+}
+
+.subtittel {
+	position: relative;
+	left: 8vw;
+	color: var(--maincolor);
+	text-shadow: 1px 1px 2px var(--textcolor);
+}
+
+#result {
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+	text-align: center;
+	top: 0;
+	left: 0;
+	font-size: 4em;
+	background-color: white;
+	
+}
+span{
+	position: relative;
+	top: 10vh;
+}
+ /* Media query for mobiltelefoner */
+@media only screen and (min-width: 415px) and (max-width: 780px){
+	body{
+		background-color: var(--comcolor);
+	}
+	#ramme{
+		position: absolute;
+		left: 5vw;
+		top: 5vh;
+		height: 90vh;
+		box-shadow: 0 0 12px 0 rgba(0,0,0,0.3); 
+	}
+	#burger{
+		top: 3vh;
+		right: 7vw;
+	}
+	.ham{
+		width: 10vw;
+	}
+	.subtittel{
+		font-size: 2em;
+	}
+	ul{
+		display:inline-flex;
+	}
+	ul li{
+		margin: 0 2vw;
+		font-size: 1.7em;
+	}
+	.holder {
+		margin: 5vw;
+		position: relative;
+		width: 80vw;
+	}
+	#hold1{
+		margin-top: 18vh;
+		overflow: hidden;
+	}
+	#result{ 
+		position: absolute;
+		width: 90vw;
+		color: black;
+	}
+	
+}
+/* Media query for ipad pro + desktop */
+@media only screen and (min-width: 781px){
+	body{
+		background-color: var(--comcolor);
+		padding: 0;
+		width: 100%;
+		height: 100%;
+	}
+	#ramme{
+		position: absolute;
+		background-color: var(--background);
+		border: .3vw solid var(--maincolor);
+		height: 90vh;
+		width: 70vw;
+		left: 60%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+	#burger {
+		left: 0;
+		border: none;
+		margin: 2vw;
+	}
+	.ham{
+		width: 5vw;
+	}
+	.holder{
+		width: 40%;
+	}
+	#hold1{
+		border: 0.2vw solid var(--maincolor);
+		box-shadow: 0.2vw 0 0.5vw var(--textcolor);
+	}
+	#overlayer{
+		left: 30vw;
+		top: -10vh;
+	}
+	#meny{
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 20vw;
+		border: none;
+	}
+	#meny img{
+		position: absolute;
+		width: 15vw;
+		bottom: 10vh;
+		left: 0;
+		margin: 1vh;
+	}
+	ul li {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		font-size: 1.7em;
+		padding: 1vw;
+		background-color: var(--maincolor);
+		color: var(--background);
+		transition: .2s ease-in-out;
+		text-align: center;
+		
+	}
+	ul li:hover{
+		transform: translateY(-.3vh);
+		color: var(--background);
+		box-shadow: 0 .3vh 5px var(--textcolor);
+	}
+	#knappen {
+	width: 20vw;
+	height: 5vh;
+	border: .3vw solid var(--maincolor);
+	margin: 1vh 0 0 0;
+	text-align: center;
+	transition: .3s ease-in-out;
+	box-shadow: 0 2px 4px var(--textcolor);;
+}
+#knappen:hover {
+	background-color: var(--maincolor);
+	color: var(--background);
+	transform: translate(-50%, -2px);
+	box-shadow: 0 4px 4px var(--textcolor);
+}
+
+	
+}
